@@ -1,20 +1,38 @@
 h3{
-    color:red;
+    color:rgb(115, 204, 14);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
 }
-.button-container{
-    display:flex;
-    flex-wrap: wrap;
-    height:500px;
-    width:700px;
-    margin-left:410px;
-    justify-content: center;
-    align-items: center;
+.container{
+    display:grid;
+    grid-template-rows: repeat(3,11vw);
+    grid-template-columns:repeat(3,10vw);
+    margin-left:530px;
 }  
 button{
-    width:175px;
-    height:160px;
-    margin-top:8px;
-    margin-left:5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-collapse: collapse;
+    background-color: transparent;
+}
+button:hover{
+    background-color:rgba(247, 202, 119, 0.744);
+}
+.bcollapse{
+    border-collapse: collapse;
+}
+.bt{
+    border-top: 0;
+}
+.bl{
+    border-left: 0;
+}
+.br{
+    border-right: 0;
+}
+.bb{
+    border-bottom:0;
 }
 
