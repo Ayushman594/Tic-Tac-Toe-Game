@@ -1,6 +1,7 @@
 h3{
     color:rgb(115, 204, 14);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:48px;
     text-align: center;
 }
 .container{
@@ -13,12 +14,16 @@ button{
     display:flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 60px;
     border-collapse: collapse;
     background-color: transparent;
 }
+p{
+    text-align:center;
+    font-size:17px;
+}
 button:hover{
-    background-color:rgba(247, 202, 119, 0.744);
+    background-color:rgba(153, 147, 134, 0.744);
 }
 .bcollapse{
     border-collapse: collapse;

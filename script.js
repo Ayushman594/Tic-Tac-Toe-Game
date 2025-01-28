@@ -1,57 +1,44 @@
-let a=document.querySelector("h3");
-let btn=document.querySelector("button");
-let p=document.querySelector("p");
-let p1=document.querySelector("#display-turn");
-a.innerHTML="Tic-Tac-Toe";
-a.style.fontSize="40px";
-a.style.textAlign="center";
-let Player1=prompt("enter X or O");
- let Player2;
- do{
+let p=document.querySelector("#display-turn");/* This selects a paragraph tag with id display-turn for displaying turns*/
+let p1=document.querySelector("p");//This selects a paragraph tag for displaying choice between X or O
+let btn=document.querySelectorAll("button");//This selects All button tags 
 
-    if(Player1=="X"){
-     Player2="O";
-     break;
+// selecting X or O and taking value of comp as per player's choice 
+let player=prompt("Choose X or O");
+let comp;
+do{
+    if(player=="X"){
+        comp="O";
+        break;
+    }
+    else if(player=="O"){
+        comp="X";
+        break;
+    }
+    else{
+        alert("please enter between X or O");
+        player=prompt("Choose X or O");
+    }
+}while(player!="X"||comp!="O")
+p1.innerHTML=`player selected ${player}`;
+let turn=player;
+const changeTurn=()=>{
+    return turn=="X"?"O":"X";
+}
+// const checkWin=()=>{
+//     let win=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
 
-  }
-  else if(Player1=="O"){
-     Player2="X";
-     break;
-
-  }
-  else{
-          alert("Please Enter X or O");
-          Player1=prompt("enter X or O");
-
-   }
-  }while(Player1!="O" || Player1!="X")
-p.innerHTML=`Player1 choose ${Player1} then Player2 = ${Player2}`;
-p.style.textAlign="center";
-p1.style.textAlign="center";
-
-// let turn="Player1";
-//   if(turn=="Player1"){
-       
-//          turn="Player2";
-
-//   }
-//   else if(turn=="Player2"){
-//         turn="Player1";
 // }
-//   p1.innerHTML=`${turn}'s turn`;
-Array.from(btn).forEach((button)=>{
- button.addEventListener("click",(e)=>{
-let turn="Player1";
-
-if(turn=="Player1"){
-    e.Value=Player1;
-    turn="Player2";
-}
-else if(turn=="Player2"){
-   e.Value=Player2;
-   turn="Player1";
-}
-p1.innerHTML=`${turn}'s turn`;
-})
-
+Array.from(btn).forEach(element=>{
+    element.addEventListener("click",()=>{
+        const checkWin=()=>{
+            
+       }
+      if(element.innerText==""){
+        element.innerText=turn;
+        turn=changeTurn();
+        checkWin();
+        p.innerText=" Turn for " + turn;
+      }
+     
+    })
 })
