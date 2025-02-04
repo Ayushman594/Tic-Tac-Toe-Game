@@ -3,22 +3,22 @@ let p1 = document.querySelector("p"); // Displays player choices
 let btn = document.querySelectorAll(".boxtext"); // Selects all Tic-Tac-Toe buttons
 let reset = document.getElementById("reset"); // Reset button
 
-// Selecting X or O
+//Selecting X or O
 let player1 = prompt("Choose X or O");
 let player2;
 
 do {
-    if (player1 == "X") {
-        player2 = "O";
-        break;
-    } else if (player1 == "O") {
-        player2 = "X";
-        break;
+   if (player1 == "X") {
+           player2 = "O";
+           break;
+     } else if (player1 == "O") {
+         player2 = "X";
+         break;
     } else {
-        alert("Please enter X or O");
+         alert("Please enter X or O");
         player1 = prompt("Choose X or O");
-    }
-} while (player1 != "X" && player1 != "O");
+     }
+ } while (player1 != "X" && player1 != "O");
 
 // Display player selections
 p1.innerHTML = `Player1 = ${player1} and Player2 = ${player2}`;
@@ -41,17 +41,23 @@ const checkWin = () => {
 
     for (let e of win) {
         if (box[e[0]].innerText === "O" && box[e[1]].innerText === "O" && box[e[2]].innerText === "O") {
-            box[e[0]].style.backgroundColor = "lightblue";
-            box[e[1]].style.backgroundColor = "lightblue";
-            box[e[2]].style.backgroundColor = "lightblue";
+            box[e[0]].style.backgroundColor = "rgb(42, 135, 248)";
+            box[e[0]].style.color = "rgba(255,255, 255, 0.74)";
+            box[e[1]].style.backgroundColor = "rgb(42, 135, 248)";
+            box[e[1]].style.color = "rgba(255,255, 255, 0.74)";
+            box[e[2]].style.backgroundColor = "rgb(42, 135, 248)";
+            box[e[2]].style.color="rgba(255, 255, 255, 0.74)";
             p.innerText = (player1 == "O") ? `Player1 (${player1}) won` : `Player2 (${player2}) won`;
             isgameover = true;
             return;
         }
         else if (box[e[0]].innerText === "X" && box[e[1]].innerText === "X" && box[e[2]].innerText === "X") {
-            box[e[0]].style.backgroundColor = "lightblue";
-            box[e[1]].style.backgroundColor = "lightblue";
-            box[e[2]].style.backgroundColor = "lightblue";
+            box[e[0]].style.backgroundColor = "rgb(42, 135, 248)";
+            box[e[0]].style.color = "rgba(255, 255, 255, 0.74)";
+            box[e[1]].style.backgroundColor = "rgb(42, 135, 248)";
+            box[e[1]].style.color = "rgba(255, 255, 255, 0.74)";
+            box[e[2]].style.backgroundColor = "rgb(42, 135, 248)";
+            box[e[2]].style.color="rgba(255, 255, 255, 0.74)"; 
             p.innerText = (player1 == "X") ? `Player1 (${player1}) won` : `Player2 (${player2}) won`;
             isgameover = true;
             return;
@@ -89,7 +95,7 @@ Array.from(btn).forEach(element => {
                 p.innerText = "TURN FOR " + turn;
             }
         } else if (element.innerText != "") {
-            p.innerText = "Please reset or click on a remaining empty cell";
+            p.innerText = "Please reset or click on a remaining empty cell if no one won the game yet";
         }
     });
 
@@ -97,6 +103,7 @@ Array.from(btn).forEach(element => {
     reset.addEventListener("click", () => {
         element.innerText = "";
         element.style.backgroundColor = "";
+        element.style.color="";
         p.innerText = "";
         isgameover = false;
         turn = player1; // Reset turn to player1
