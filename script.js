@@ -2,6 +2,10 @@ let p = document.querySelector("#display-turn"); // Displays current turn
 let p1 = document.querySelector("p"); // Displays player choices
 let btn = document.querySelectorAll(".boxtext"); // Selects all Tic-Tac-Toe buttons
 let reset = document.getElementById("reset"); // Reset button
+p.style.color="hotpink";
+p1.style.color="hotpink";
+p.style.fontSize="20px";
+p1.style.fontSize="23px";
 
 //Selecting X or O
 let player1 = prompt("Choose X or O");
@@ -41,22 +45,22 @@ const checkWin = () => {
 
     for (let e of win) {
         if (box[e[0]].innerText === "O" && box[e[1]].innerText === "O" && box[e[2]].innerText === "O") {
-            box[e[0]].style.backgroundColor = "rgb(42, 135, 248)";
+            box[e[0]].style.backgroundColor = "rgb(25,50,230)";
             box[e[0]].style.color = "rgba(255,255, 255, 0.74)";
-            box[e[1]].style.backgroundColor = "rgb(42, 135, 248)";
+            box[e[1]].style.backgroundColor = "rgb(25,50,230)";
             box[e[1]].style.color = "rgba(255,255, 255, 0.74)";
-            box[e[2]].style.backgroundColor = "rgb(42, 135, 248)";
+            box[e[2]].style.backgroundColor = "rgb(25,50,230)";
             box[e[2]].style.color="rgba(255, 255, 255, 0.74)";
             p.innerText = (player1 == "O") ? `Player1 (${player1}) won` : `Player2 (${player2}) won`;
             isgameover = true;
             return;
         }
         else if (box[e[0]].innerText === "X" && box[e[1]].innerText === "X" && box[e[2]].innerText === "X") {
-            box[e[0]].style.backgroundColor = "rgb(42, 135, 248)";
+            box[e[0]].style.backgroundColor = "rgb(25,50,230)";
             box[e[0]].style.color = "rgba(255, 255, 255, 0.74)";
-            box[e[1]].style.backgroundColor = "rgb(42, 135, 248)";
+            box[e[1]].style.backgroundColor = "rgb(25,50,230)";
             box[e[1]].style.color = "rgba(255, 255, 255, 0.74)";
-            box[e[2]].style.backgroundColor = "rgb(42, 135, 248)";
+            box[e[2]].style.backgroundColor = "rgb(25,50,230)";
             box[e[2]].style.color="rgba(255, 255, 255, 0.74)"; 
             p.innerText = (player1 == "X") ? `Player1 (${player1}) won` : `Player2 (${player2}) won`;
             isgameover = true;

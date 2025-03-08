@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
 }
-Body{
-    background-color: aliceblue;
+body{
+    background-image:linear-gradient(to right,rgb(255, 8, 222),rgb(0, 0, 0));
 }
 h3{
-    color:rgb(115, 204, 14);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(255, 8, 222);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size:40px;
     text-align: center;
     margin-top:8px;
@@ -18,17 +18,16 @@ h3{
     grid-template-rows: repeat(3,11vw);
     grid-template-columns:repeat(3,10vw);
     height:360px;
-    margin-top:120px;
+    margin-top:110px;
     place-content: center;
 }  
 button{
     display:flex;
     justify-content: center;
     align-items: center;
-    color:rgb(0, 0, 0);
+    color:rgb(255, 8, 222);
     font-size: 60px;
-    border-color: rgb(0, 0, 0);
-    background-color:rgba(255, 224, 159, 0.744);
+    background-color:transparent;
 }
 p{
     text-align:center;
@@ -38,7 +37,8 @@ p{
     font-family:'Times New Roman', Times, serif;
 }
 button:hover{
-    background-color:rgba(255, 224, 159, 0.744);
+    background-color:rgb(255, 8, 222);
+    color:white;
 }
 #resetanddisplay{
     display:flex;
@@ -49,22 +49,24 @@ button:hover{
 }
 #reset{
     width:90px;
-    height:50px;
-    padding:6px 7px;
+    height:35px;
+    padding:5px;
     font-size:17px;
     padding-top:5px;
-    color:rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
+    color:white;
+    background-color: black;
     border-radius:5px;
+    border-color:white;
 }
 #reset:hover{
-    color:springgreen;
+   color:springgreen;
 }
 #display-turn{
     margin-top:7px;
     margin-bottom:10px;
 }
-/* @media (max-width:600px){
+/* @media (max-width:600px
+ {
     .container{
         height:600px;
     }
@@ -86,7 +88,7 @@ button:hover{
         display:grid;
         grid-template-rows: repeat(3,20vw);
         grid-template-columns:repeat(3,20vw);
-        height:150px;
+        height:180px;
         margin-top:200px;
         place-content: center;
     }
