@@ -6,6 +6,9 @@ p.style.color="hotpink";
 p1.style.color="hotpink";
 p.style.fontSize="20px";
 p1.style.fontSize="23px";
+let gameaudio=new Audio("gameover.mp3");
+let click=new Audio("Grid click.mp3");
+
 
 //Selecting X or O
 let player1 = prompt("Choose X or O");
@@ -96,9 +99,13 @@ Array.from(btn).forEach(element => {
             element.innerText = turn;
             checkWin();
             checkDraw(); // Check for a draw after every move
+            click.play();
             if (!isgameover) {
                 turn = changeTurn();
                 p.innerText = "TURN FOR " + turn;
+            }
+            else{
+                gameaudio.play();
             }
         } else if (element.innerText != "") {
             p.innerText = "Please reset or click on a remaining empty cell if no one won the game yet";

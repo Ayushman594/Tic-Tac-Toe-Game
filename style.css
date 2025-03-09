@@ -19,7 +19,7 @@ h3{
     grid-template-rows: repeat(3,11vw);
     grid-template-columns:repeat(3,10vw);
     height:360px;
-    margin-top:110px;
+    margin-top:90px;
     place-content: center;
 }  
 button{
@@ -69,48 +69,6 @@ button:hover{
     margin-top:7px;
     margin-bottom:15px;
 }
-@media (max-width:1000px){
-    body{
-        padding:15px;
-    }
-    .container{
-        display:grid;
-        grid-template-rows: repeat(3,25vw);
-        grid-template-columns:repeat(3,25vw);
-        margin-left: auto;
-        margin-right: auto;
-        margin-top:250px;
-        place-content: center;
-    }
-    button{
-        font-size: 110px;
-        padding:40px;
-    }
-    button:hover{
-        background-color:rgb(255, 8, 8);
-        color:white;
-    }
-    h3 {
-        font-size:70px;
-        color:rgb(255, 8, 222);
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
-    p{
-        margin-top:20px;
-        margin-bottom:18px;
-    }
-    #reset {
-        width:120px;
-        height:110px;
-        font-size: 24px;
-    }
-    #resetanddisplay{
-        margin-top:280px;
-    }
-    #display-turn{
-        margin-bottom: 15px;
-    }
-}
 
 /* For Tablets (max-width: 768px) */
 @media (max-width: 768px) {
@@ -135,7 +93,7 @@ button:hover{
         color:white;
     }
     h3 {
-        font-size:30px;
+        font-size:37px;
         color:rgb(255, 8, 222);
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
